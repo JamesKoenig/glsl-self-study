@@ -4,16 +4,18 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-const pi = radians(180);
+const float pi = radians(180);
 
 /*
  * NB. most uses of this seem to want to produce a value [0,1]
  *     i.e. vert_shifts +/- amps have seemingly been within that boundary
  *
- * Note2. when `ordPhases = vec4(0)` this is equivalent to a single iteration
+ * Note2. when `ordPhases = vec4(0)` this is related to a single iteration
  *        of a (per rgba channel) fourier series where `sin` has coefficient
  *        of `amps` while cos has a zero coefficient.
  *        (the relation would probably be clearer if I kept sin)
+ *        Though for a Fourier series the frequencies would be the same per
+ *        iteration.
  */
 vec4 palette(float t, mat4 coeffs) {
   const mat4 trans       = transpose(coeffs);
