@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2026 James Koenig
+ *
+ * SPDX-License-Identifier: BSD-2-Clause
+ */
+
 const pi = radians(180);
 
 /*
